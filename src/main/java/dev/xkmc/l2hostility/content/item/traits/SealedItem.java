@@ -32,8 +32,6 @@ public class SealedItem extends Item {
 		ItemStack ans = LHItems.SEAL.asStack();
 		ans.getOrCreateTag().putInt(TIME, time);
 		ans.getOrCreateTag().put(DATA, stack.save(new CompoundTag()));
-		if (stack.getEnchantmentLevel(LCEnchantments.SOUL_BOUND.get()) > 0)
-			ans.enchant(LCEnchantments.SOUL_BOUND.get(), 1);
 		if (stack.getEnchantmentLevel(LHEnchantments.VANISH.get()) > 0)
 			ans.enchant(LHEnchantments.VANISH.get(), 1);
 		return ans;
